@@ -1,0 +1,6 @@
+[
+  { "kind": "dog", "sound": "woof" },
+  { "kind": "cat", "sound": "meow" },
+  { "kind": "pokemon", "sound": "pika" },
+  { "kind": "human", "sound": "hello" }
+]

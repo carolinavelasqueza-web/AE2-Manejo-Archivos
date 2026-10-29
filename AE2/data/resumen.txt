@@ -1,0 +1,26 @@
+=== RESUMEN DE EJECUCIÓN - AE2 ===
+
+URLs de origen:
+- CSV: https://huggingface.co/datasets/scikit-learn/iris/resolve/main/Iris.csv
+- JSON: https://huggingface.co/datasets/datasets-examples/doc-formats-json-1/resolve/main/data.json
+
+Clases y métodos utilizados:
+- ManejadorCSV: importar(), modificar(), guardar()
+- ManejadorJSON: importar(), modificar(), guardar()
+- GeneradorResumenTXT: registrar_operacion(), generar_resumen()
+
+=== DETALLE DE OPERACIONES ===
+
+Operación 1:
+  Formato: CSV
+  Archivo importado: data/original.csv
+  Modificación: Actualización de columna 'Species' en la fila 0
+  Archivo guardado: data/modificado.csv
+  Registros procesados: 150
+
+Operación 2:
+  Formato: JSON
+  Archivo importado: data/original.json
+  Modificación: Adición de la clave 'procesado_por' a todos los registros
+  Archivo guardado: data/modificado.json
+  Registros procesados: 4
