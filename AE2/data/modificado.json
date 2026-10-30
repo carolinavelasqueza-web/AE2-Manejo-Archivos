@@ -13,10 +13,5 @@
         "kind": "pokemon",
         "sound": "pika",
         "procesado_por": "AE2_Evidencia_Aprendizaje"
-    },
-    {
-        "kind": "human",
-        "sound": "hello",
-        "procesado_por": "AE2_Evidencia_Aprendizaje"
     }
 ]

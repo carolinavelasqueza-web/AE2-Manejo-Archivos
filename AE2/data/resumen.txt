@@ -1,26 +1,37 @@
 === RESUMEN DE EJECUCIÓN - AE2 ===
+Fecha de ejecución: 2026-10-29 19:53:46
 
 URLs de origen:
 - CSV: https://huggingface.co/datasets/scikit-learn/iris/resolve/main/Iris.csv
 - JSON: https://huggingface.co/datasets/datasets-examples/doc-formats-json-1/resolve/main/data.json
 
-Clases y métodos utilizados:
-- ManejadorCSV: importar(), modificar(), guardar()
-- ManejadorJSON: importar(), modificar(), guardar()
-- GeneradorResumenTXT: registrar_operacion(), generar_resumen()
-
 === DETALLE DE OPERACIONES ===
 
-Operación 1:
-  Formato: CSV
+Operación 1 (CSV):
+  Clase utilizada: ManejadorCSV
+  Métodos llamados: importar(), modificar(), agregar_registro(), guardar()
   Archivo importado: data/original.csv
-  Modificación: Actualización de columna 'Species' en la fila 0
-  Archivo guardado: data/modificado.csv
-  Registros procesados: 150
+  Modificaciones realizadas:
+    - Actualizó 'Species' en la fila 0: 'Iris-setosa' -> 'Iris-setosa-MODIFICADA'
+    - Agregó 1 registro: [151, 6.0, 3.0, 4.8, 1.8, 'Iris-virginica'] (total tras agregar: 151)
+  Archivo guardado: data/modificado.csv (existe: sí)
+  Registros antes: 150 | después: 151
 
-Operación 2:
-  Formato: JSON
+Operación 2 (JSON):
+  Clase utilizada: ManejadorJSON
+  Métodos llamados: importar(), modificar(), eliminar_registro(), guardar()
   Archivo importado: data/original.json
-  Modificación: Adición de la clave 'procesado_por' a todos los registros
-  Archivo guardado: data/modificado.json
-  Registros procesados: 4
+  Modificaciones realizadas:
+    - Agregó la clave 'procesado_por' a 4 registros
+    - Eliminó el último registro: {'kind': 'human', 'sound': 'hello', 'procesado_por': 'AE2_Evidencia_Aprendizaje'}
+  Archivo guardado: data/modificado.json (existe: sí)
+  Registros antes: 4 | después: 3
+
+=== TOTALES ===
+Registros importados en total: 154
+Operaciones registradas: 2
+
+Clases y métodos utilizados (según la ejecución):
+- ManejadorCSV: importar(), modificar(), agregar_registro(), guardar()
+- ManejadorJSON: importar(), modificar(), eliminar_registro(), guardar()
+- GeneradorResumenTXT: registrar_operacion() x2, generar_resumen() x1
